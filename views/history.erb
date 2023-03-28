@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat History</title>
+  </head>
+  <body>
+    <h1>Chat History</h1>
+    <table>
+      <tr>
+        <th>Text</th>
+        <th>User ID</th>
+        <th>Sender</th>
+        <th>Created At</th>
+      </tr>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.text %></td>
+          <td><%= message.user_id %></td>
+          <td><%= message.sender %></td>
+          <td><%= message.created_at %></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
